@@ -18,10 +18,11 @@ The project consists of two main components:
 
 ### Backend (Solidity Contracts and Deployment Scripts)
 
-- Contract Deployment: Deploys core Uniswap V3 contracts (Factory, SwapRouter, NFTDescriptor, etc.) and links libraries.
-- Token Deployment: Deploys sample ERC20 tokens and mints initial supply.
-- Pool Deployment: Creates Uniswap V3 pools and adds initial liquidity.
-- Liquidity Checking: Fetches and displays the current state of deployed pools.
+- `Pool Contract`–the core pool contract that implements liquidity management and swapping. This contract is very close to the original one, however, some implementation details are different and something is missed for simplicity. For example, our implementation will only handle “exact input” swaps, that is swaps with known input amounts. The original implementation also supports swaps with known output amounts (i.e. when you want to buy a certain amount of tokens).
+- `Factory Contract`–the registry contract that deploys new pools and keeps a record of all deployed pools.
+- `Manager Contract`–a periphery contract that makes it easier to interact with the pool contract. This is a very simplified implementation of SwapRouter.
+- `Quoter Contract`- is a cool contract that allows calculating swap prices on-chain. This is a minimal copy of both Quoter and QuoterV2. Again, only “exact input” swaps are supported.
+- `NFTManager Contract`-allows turning liquidity positions into NFTs. This is a simplified implementation of NonfungiblePositionManager.
 
 ### Frontend (Next.js Components)
 
