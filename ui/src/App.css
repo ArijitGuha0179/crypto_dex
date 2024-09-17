@@ -1,0 +1,50 @@
+.App {
+  @apply m-0 p-0 min-h-screen w-full flex flex-col;
+  font-family: 'Inter', sans-serif;
+}
+
+.App-header {
+  @apply bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-6 px-4 shadow-md;
+}
+
+.App-title {
+  @apply text-3xl font-bold mb-2;
+}
+
+.App-subtitle {
+  @apply text-lg opacity-80;
+}
+
+.App-main {
+  @apply flex-grow p-6 bg-gray-50;
+}
+
+.App-footer {
+  @apply bg-gray-800 text-white py-4 px-6 text-center;
+}
+
+.App-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.App-button {
+  @apply px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition duration-300 ease-in-out;
+}
+
+.App-card {
+  @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .App {
+    @apply bg-gray-900 text-white;
+  }
+
+  .App-main {
+    @apply bg-gray-800;
+  }
+
+  .App-card {
+    @apply bg-gray-700 text-white;
+  }
+}

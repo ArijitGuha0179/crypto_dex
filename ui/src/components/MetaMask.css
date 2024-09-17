@@ -1,0 +1,40 @@
+.MetaMaskContainer {
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-xl transform hover:-translate-y-1;
+}
+
+.MetaMaskContainer-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.MetaMaskContainer-title {
+  @apply text-xl font-semibold text-gray-800 dark:text-white;
+}
+
+.MetaMaskContainer-icon {
+  @apply w-8 h-8 text-orange-500;
+}
+
+.MetaMaskContainer-content {
+  @apply space-y-4;
+}
+
+.MetaMaskContainer-info {
+  @apply text-sm text-gray-600 dark:text-gray-300;
+}
+
+.MetaMaskContainer-button {
+  @apply w-full py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition duration-150 ease-in-out;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500;
+}
+
+@media (max-width: 640px) {
+  .MetaMaskContainer {
+    @apply p-4;
+  }
+  
+  .MetaMaskContainer-title {
+    @apply text-lg;
+  }
+}

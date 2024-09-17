@@ -1,0 +1,61 @@
+.SwapContainer {
+  @apply w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-all duration-300 ease-in-out;
+}
+
+.SwapContainer header {
+  @apply flex items-center justify-between mb-6;
+}
+
+.SwapContainer header h1 {
+  @apply text-2xl font-bold text-gray-800 dark:text-white;
+}
+
+.SwapContainer header button {
+  @apply p-2 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200;
+}
+
+.SwapForm {
+  @apply space-y-4;
+}
+
+.SwapForm fieldset {
+  @apply flex flex-col;
+}
+
+.SwapInput {
+  @apply relative rounded-lg shadow-sm;
+}
+
+.SwapInput input {
+  @apply block w-full pl-3 pr-20 py-3 text-lg border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white;
+}
+
+.SwapInput select {
+  @apply absolute inset-y-0 right-0 flex items-center px-2 text-gray-500 bg-gray-100 border border-gray-300 rounded-r-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-200 dark:hover:bg-gray-500;
+}
+
+.SwapForm button.swap {
+  @apply w-full py-3 px-4 text-lg font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200;
+}
+
+.ChangeDirectionBtn {
+  @apply flex justify-center items-center w-10 h-10 mx-auto my-2 text-gray-500 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors duration-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600;
+}
+
+.SlippageControl {
+  @apply flex items-center justify-end mt-4 mb-2;
+}
+
+.SlippageControl label {
+  @apply text-sm font-medium text-gray-700 dark:text-gray-300 mr-2;
+}
+
+.SlippageControl input {
+  @apply w-20 px-3 py-2 text-sm border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white;
+}
+
+@media (max-width: 640px) {
+  .SwapContainer {
+    @apply max-w-sm mx-4;
+  }
+}
